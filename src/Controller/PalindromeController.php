@@ -12,9 +12,21 @@ class PalindromeController extends AbstractController {
     public function palindromeChecker(Request $req) {
         $str = $req->query->get("str");
 
+        if ($str == "") {
+            $msg = "Please enter a string";
+        } else {
+            $str = trim($str);
+
+            if ($str == strrev($str)) {
+                $msg = " is a palindrom";
+            } else {
+                $msg = " is not a palindrom";
+            }
+        }
+
         return $this->render('palindrome/palindrome.html.twig', [
             "str" => $str,
-            "message" => "hello"
+            "msg" => $msg
         ]);
     }
 }

@@ -1,0 +1,43 @@
+{% block stylesheets %}
+	<link rel="stylesheet" href="CSS/style.css">
+{% endblock %}
+
+{% block header %}
+	<header>
+		<h1>Link page</h1>
+		<nav>
+			<ul>
+				<li><a href="/"><h2>Home</h2></a></li>
+				<li><a href="/about"><h2>About</h2></a></li>
+				<li><a href="/palindrome_checker"><h2><u>Palindrome</u></h2></a></li>
+			</ul>
+		</nav>
+	</header>
+{% endblock %}
+
+{% block body %}
+
+	<main class="wrapper">
+
+		<h1>Palindrome Checker</h1>
+
+
+		<i>Enter any string to verify its palindromism and palindrominity</i>
+
+		<form action="" method="get">
+			<label for="str">
+				<p>{{ str }}{{ msg }}</p>
+			</label>
+			<input id="str" name="str" type="text">
+			<input type="submit" value="Check">
+		</form>
+
+	</main>
+
+{% endblock %}
+
+{% block footer %}
+	<footer>
+		<small>Copyright &copy; Alex Tran</small>
+	</footer>
+{% endblock %}
