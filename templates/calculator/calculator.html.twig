@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="CSS/calculator.css">
 
 <div class="wrapper">
-  <form action={{ path("app_calculate") }} method="post">
+  <h1>Calculator App</h1>
+  <i>Enter both numbers, choose an operator and click Calculate</i>
+
+  <form action={{ path("calculator") }} method="post">
     <div class="input_field">
       <label for="first_number">Enter first number</label>
       <input type="number" step="0.001" name="first_number" id="first_number" required>
@@ -29,8 +32,21 @@
       <label for="second_number">Enter second number</label>
       <input type="number" step="0.001" name="second_number" id="second_number" required>
     </div>
-    <input type="submit" value="Calculate" class="button-54">
+    <div class="result_container">
+      <input type="submit" value="Calculate" class="button-54">
+
+      {% if result != null %}
+        <div class="result">
+          <h3>
+            Result: {{ first_number ~ " " ~ operator ~ " " ~ second_number ~ " = " ~ result  }}
+          </h3>
+        </div>
+      {% endif %}
+      
+    </div>
   </form>
+
+
 </div>
 
 {% endblock %}
