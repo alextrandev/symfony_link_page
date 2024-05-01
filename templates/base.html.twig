@@ -19,9 +19,9 @@
 				<h1>Link page</h1>
 				<nav>
 					<ul>
-						<li><a href="/"><h2>Home</h2></a></li>
-						<li><a href="/about"><h2>About</h2></a></li>
-						<li><a href="/palindrome_checker"><h2>Palindrome</h2></a></li>
+						{{ include("_nav_list_item.html.twig", {route:"index", name:"Home"}) }}
+						{{ include("_nav_list_item.html.twig", {route:"about", name:"About"}) }}
+						{{ include("_nav_list_item.html.twig", {route:"palindrome_checker", name:"Palindrome"}) }}
 					</ul>
 				</nav>
 			</header>
