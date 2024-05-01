@@ -1,19 +1,4 @@
-{% block stylesheets %}
-	<link rel="stylesheet" href="CSS/style.css">
-{% endblock %}
-
-{% block header %}
-	<header>
-		<h1>Link page</h1>
-		<nav>
-			<ul>
-				<li><a href="/"><h2>Home</h2></a></li>
-				<li><a href="/about"><h2><u>About</u></h2></a></li>
-				<li><a href="/palindrome_checker"><h2>Palindrome</h2></a></li>
-			</ul>
-		</nav>
-	</header>
-{% endblock %}
+{% extends "base.html.twig" %}
 
 {% block body %}
 
@@ -49,10 +34,4 @@
 
 	</main>
 
-{% endblock %}
-
-{% block footer %}
-	<footer>
-		<small>Copyright &copy; Alex Tran</small>
-	</footer>
 {% endblock %}
